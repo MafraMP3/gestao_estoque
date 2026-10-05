@@ -1,5 +1,5 @@
 <?php 
-include "../infra/database/conexao.php";
+include "../infra/database/conn.php";
 
 $nome = $_POST["nome"];
 $categoria = $_POST["categoria"];
@@ -9,17 +9,17 @@ $dataValidade = $_POST["dataValidade"];
 
 if ($nome == null || $categoria == null || $dataValidade == null || $preco == null || $quantiaEstoque == null){
     echo "<script>
-          alert('Erro no cadastro de brinquedos, não é permitido campos vazios');
+          alert('Erro no cadastro de produtos, não é permitido campos vazios');
           window.location.href = 'index.php'
           </script>";
     die();
 }
 
 
-$sql = "INSERT INTO brinquedos (nome,categoria,faixaEtaria,preco,quantiaEstoque) VALUES (?,?,?,?,?)";
+$sql = "INSERT INTO produtos (nome,categoria,preco,quantiaEstoque,dataValidade) VALUES (?,?,?,?,?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssidi", $nome,$categoria,$faixaEtaria,$preco,$quantiaEstoque);
+$stmt->bind_param("ssdis", $nome, $categoria, $preco, $quantiaEstoque, $dataValidade);
 
 if ($stmt->execute()) {
     header("Location: index.php");
