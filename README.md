@@ -9,7 +9,7 @@ O sistema permite controlar informações como nome, categoria, preço, quantida
 flowchart LR
     usuario([Usuário])
 
-    subgraph sistema["Sistema de Gestão de Estoque"]
+    subgraph sistema["Caso de uso"]
         cadastrar((Cadastrar produto))
         visualizar((Visualizar produtos))
         editar((Editar produto))
