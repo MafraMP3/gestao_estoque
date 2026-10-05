@@ -22,7 +22,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssdis", $nome, $categoria, $preco, $quantiaEstoque, $dataValidade);
 
 if ($stmt->execute()) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 } else {
     echo "Erro ao cadastrar: " . $stmt->error;
