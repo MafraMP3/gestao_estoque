@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS produtos (
     preco decimal (10,2) NOT NULL,
     quantiaEstoque int  NOT NULL,
     dataValidade date NOT NULL
-)
+);

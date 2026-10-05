@@ -1,5 +1,5 @@
 <?php
-include "../infra/conexao.php";
+include "../infra/database/conexao.php";
 $id = isset($_GET["id"]) ? (int)$_GET["id"] : null;
 $sql = "DELETE FROM produtos WHERE id = ?";
 
