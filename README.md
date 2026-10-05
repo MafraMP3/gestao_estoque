@@ -4,6 +4,23 @@
 O sistema de Gestão de Estoque foi desenvolvido para realizar o cadastro, visualização, edição e exclusão de produtos de um estoque.
 O sistema permite controlar informações como nome, categoria, preço, quantidade disponível e data de validade dos produtos.
 
+## Caso de uso
+```mermaid
+flowchart LR
+    usuario([Usuário])
+
+    subgraph sistema["Sistema de Gestão de Estoque"]
+        cadastrar((Cadastrar produto))
+        visualizar((Visualizar produtos))
+        editar((Editar produto))
+        excluir((Excluir produto))
+    end
+
+    usuario --> cadastrar
+    usuario --> visualizar
+    usuario --> editar
+    usuario --> excluir
+```
 ## Tecnologias utilizadas
 
 * PHP
