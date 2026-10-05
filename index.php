@@ -33,6 +33,6 @@ include "infra/database/conexao.php";
     </form>
 
     <br><br>
-    <?php include "public/components/tableProdutos.php"; ?>
+    <?php include "public/components/tabelaProdutos.php"; ?>
 </body>
 </html>
